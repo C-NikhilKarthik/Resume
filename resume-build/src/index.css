@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slider {
+    0% {width:0}
+    100%{width:80%}
+}
+
+:root{
+    --phypaper:"https://i1.rgstatic.net/publication/234792995_Importance_of_Nuclear_Physics_to_NASA''s_Space_Missions/links/02e7e520fe88f853a1000000/largepreview.png";
+    --outpass:"./images/Outpass.png";
+}
