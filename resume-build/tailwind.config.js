@@ -8,6 +8,12 @@ module.exports = {
         100: "24rem",
         200: "950px",
       },
+      keyframes: {
+        slide: {
+          '0%': { width:'0'},
+          '100%': { width:'100%'},
+        }
+      },
       minHeight: {
         "1/2": "50%",
       },
@@ -15,7 +21,7 @@ module.exports = {
         v: "20vh",
       },
       animation: {
-        slid: "slider 5s linear infinite",
+        slid: "slide 5s linear infinite",
       },
       fontFamily: {
         sans: "Helvetica, Arial, sans-serif",
