@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Photo1 from "../images/Photo1.jpg";
 import Text from "./Text";
 // import { motion, AnimatePresence } from "framer-motion";
 function Description() {
@@ -28,7 +27,7 @@ function Description() {
       <div className="flex sm:flex-row flex-col items-center w-full justify-center">
         <div className="flex w-min px-4 gap-4 sm:flex-row items-center bg-gray-900/50 py-5 rounded-lg backdrop-filter backdrop-blur-sm flex-col text-gray-100">
           <div className="flex w-full rounded-lg overflow-hidden border shadow-xl md:w-54 sm:w-48">
-            <img src={Photo1} />
+            <img src="images/Photo1.jpg" />
           </div>
           <div className="flex flex-col flex-1 px-3">
             <Text object={objects[0]}/>
