@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Text from "./Text";
 // import { motion, AnimatePresence } from "framer-motion";
 function Description() {
@@ -22,6 +22,20 @@ function Description() {
       "See my Work",
     ],
   ];
+
+  const [desc, setDesc] = useState(0)
+
+  useEffect(() => {
+      setTimeout(() => {
+        if(desc >= objects.length-1){
+          setDesc(0)
+        }else{
+          setDesc(desc+1)
+        }
+
+      },3000)
+  }, [desc])
+
   return (
     <div data-aos="zoom-in" data-aos-delay="300" className="w-full p-6 mt-6">
       <div className="flex sm:flex-row flex-col items-center w-full justify-center">
@@ -30,7 +44,7 @@ function Description() {
             <img src="images/Photo1.jpg" />
           </div>
           <div className="flex flex-col flex-1 px-3">
-            <Text object={objects[0]}/>
+            <Text object={objects[desc]}/>
           </div>
         </div>
       </div>

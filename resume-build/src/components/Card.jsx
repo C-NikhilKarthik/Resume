@@ -1,12 +1,12 @@
 import React from "react";
 
-function Card({item}) {
+function Card({ item }) {
   return (
     <div class="max-w-md mx-auto my-4 bg-gray-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
       <div class="md:flex">
-        <div class="md:shrink-0">
+        <div class="md:shrink-0 flex items-center">
           <img
-            class="h-48 w-full cursor-pointer object-cover md:object-left object-top  md:h-full md:w-52"
+            class="h-48 w-full cursor-pointer object-cover md:object-left object-top shadow  md:w-52"
             src={item.image}
             alt="Images"
           />
