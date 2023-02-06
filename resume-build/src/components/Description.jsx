@@ -33,7 +33,7 @@ function Description() {
           setDesc(desc+1)
         }
 
-      },3000)
+      },5000)
   }, [desc])
 
   return (
