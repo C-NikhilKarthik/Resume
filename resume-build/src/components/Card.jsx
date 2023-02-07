@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 function Card({ item }) {
+  useEffect(()=>{
+    AOS.init();
+  },[])
   return (
-    <div class="max-w-md mx-auto my-4 bg-gray-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div data-aos="fade-right" data-aos-duration="500" data-aos-ease="ease-in-out" class="max-w-md mx-auto my-4 bg-gray-100 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
       <div class="md:flex">
         <div class="md:shrink-0 flex items-center">
           <img
