@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.33f0f8a6.css",
-    "main.js": "/Resume/static/js/main.fb3a93cb.js",
+    "main.css": "/Resume/static/css/main.f370c071.css",
+    "main.js": "/Resume/static/js/main.81ce6b6c.js",
     "static/media/Photo.jpeg": "/Resume/static/media/Photo.8f40bce0caddf8866740.jpeg",
     "static/media/CNK_Logo.png": "/Resume/static/media/CNK_Logo.0e6d2e05fb268e66e302.png",
     "index.html": "/Resume/index.html",
-    "main.33f0f8a6.css.map": "/Resume/static/css/main.33f0f8a6.css.map",
-    "main.fb3a93cb.js.map": "/Resume/static/js/main.fb3a93cb.js.map"
+    "main.f370c071.css.map": "/Resume/static/css/main.f370c071.css.map",
+    "main.81ce6b6c.js.map": "/Resume/static/js/main.81ce6b6c.js.map"
   },
   "entrypoints": [
-    "static/css/main.33f0f8a6.css",
-    "static/js/main.fb3a93cb.js"
+    "static/css/main.f370c071.css",
+    "static/js/main.81ce6b6c.js"
   ]
 }
