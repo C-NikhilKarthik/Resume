@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+ul {
+  counter-reset: item;
+}
+ul li {
+  counter-increment: item;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+section div div ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.arrow li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #64ffda;
+  font-size: 14px;
+  line-height: 12px;
+}
+main {
+  counter-reset: section;
+}
+main section {
+  counter-increment: section;
+}
+section h2::before {
+  content: "0" counter(section) ".";
+  color: #64ffda;
+  margin-right: 5px;
+  font-size: clamp(16px, 3vw, 20px);
+}
+
+*::selection {
+  background-color: #64ffdb24;
+  color: #64ffda;
+  user-select: all;
+}
+body {
+  font-family: sans-serif;
+}
+.image {
+  filter: sepia(81%) saturate(252%) hue-rotate(83deg); /* turn the image green by desaturating it and shifting the colors by 120 degrees towards green, then increase the saturation to show only the green color */
+}
+
+.image:hover {
+  filter: none; /* turn the image green by desaturating it and shifting the colors by 120 degrees towards green, then increase the saturation to show only the green color */
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #08192e;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #666b7a;
+    border-radius: 20px;
+    height: 10%;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #64ffda;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.part-1{
+  position: relative;
+  grid-area:1/1/-1/7;
+}
+
+.part-2{
+  position: relative;
+  grid-area:1/6/-1/-1;
+}
+
+.check{
+  grid-column: 1/-1;
 }
