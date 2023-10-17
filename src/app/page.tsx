@@ -16,22 +16,22 @@ import Reveal from "@/components/Reveal";
 function Home() {
   const [show, setShow] = useState(false);
   const [mousePosition, setMousePosition] = useState({
-    x: null,
-    y: null,
+    x: 0,
+    y: 0,
   });
 
   useEffect(() => {
-    function handle(e: any) {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    }
-
-    document.addEventListener("mousemove", handle);
-    return () => {
-      document.removeEventListener("mousemove", handle);
-    };
+      function handle(e: any) {
+        setMousePosition({
+          x: e.clientX,
+          y: e.clientY,
+        });
+      }
+  
+      document.addEventListener("mousemove", handle);
+      return () => {
+        document.removeEventListener("mousemove", handle);
+      };
   }, []);
 
   const ref = useRef(null);
@@ -50,9 +50,10 @@ function Home() {
         className="pointer-events-none fixed inset-0 z-[2] transition duration-300 lg:absolute"
         style={{
           background: `radial-gradient(600px at ${mousePosition.x}px ${
-            mousePosition.y + window.pageYOffset
+            mousePosition.y + (typeof window !== "undefined" ? window.pageYOffset : 0)
           }px, rgba(29, 78, 216, 0.15), transparent 80%)`,
         }}
+        
       ></div>
       <div className="relative z-30">
         <Navbar show={show} setShow={setShow} />
