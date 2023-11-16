@@ -1,13 +1,14 @@
 import React from "react";
 import Reveal from "./Reveal";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 function Intro() {
   return (
     <div className="w-full h-screen flex items-center justify-center pr-8 md:px-24">
       <div className="w-full max-w-[1000px] flex flex-col">
         <Reveal xPos={-75} width="100%" delay={0.4}>
-          <div className="text-[clamp(14px,5vw,16px)] leading-[1.1] mb-[30px] text-[#64FFDA]">
+          <div className="text-[clamp(14px,5vw,16px)] leading-[1.1] mb-[20px] text-[#64FFDA]">
             Hi, my name is
           </div>
         </Reveal>
@@ -30,14 +31,15 @@ function Intro() {
           </div>
         </Reveal>
         <Reveal xPos={-75} width="100%" delay={0.7}>
-          <div
-            // href="#project"
-            className="px-7 py-5 mt-[50px] hover:bg-[#64ffdb24] transition-[background-color] duration-300 text-[#64FFDA] border-2 border-[#64FFDA] w-fit rounded-md text-sm font-semibold"
-          >
-            <a href="#project" className="w-full h-full no-underline">
-              Checkout my Projects
-            </a>
-          </div>
+          <Link href={"/archive"}>
+            <div
+              // href="#project"
+              className="px-7 items-center py-5 flex gap-2 mt-[50px] hover:bg-[#64ffdb24] transition-[background-color] duration-300 text-[#64FFDA] border-2 border-[#64FFDA] w-fit rounded-md text-sm font-semibold"
+            >
+              <div>My Project Archive</div>
+              <FaArrowRight />
+            </div>
+          </Link>
         </Reveal>
       </div>
     </div>

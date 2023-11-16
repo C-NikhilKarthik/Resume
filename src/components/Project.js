@@ -23,8 +23,9 @@ const Project = [
           }
   
       ],
+      Year:2022,
       Link:"",
-      GitHubLink:""
+      GitHubLink:"https://github.com/C-NikhilKarthik/Outpass-and-Complaints"
     },
     {
       key: 2,
@@ -50,8 +51,9 @@ const Project = [
           }
   
       ],
+      Year:2022,
       Link:"",
-      GitHubLink:""
+      GitHubLink:"https://github.com/C-NikhilKarthik/P4it-Research-paper1"
     },
     {
       key: 3,
@@ -81,8 +83,9 @@ const Project = [
           }
   
       ],
+      Year:2023,
       Link:"",
-      GitHubLink:""
+      GitHubLink:"https://github.com/C-NikhilKarthik/CS-301-Project"
     },
     {
       key: 4,
@@ -116,8 +119,9 @@ const Project = [
           }
   
       ],
-      Link:"",
-      GitHubLink:""
+      Year:2023,
+      Link:"https://venture-flow.netlify.app/",
+      GitHubLink:"https://github.com/C-NikhilKarthik/Vidkarya-client"
     },
   ];
   

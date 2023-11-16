@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Image from "next/image";
 import Reveal from "./Reveal";
+import Link from "next/link";
 
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState<string | null>(null);
@@ -53,22 +54,22 @@ function Navbar({
         <ul className="md:flex items-center hidden text-slate-300 text-sm">
           <Reveal delay={0.25} width="fit-content" yPos={true}>
             <li className="mx-4 cursor-pointer">
-              <a href="#about">About</a>
+              <Link href={"/#about"}>About</Link>
             </li>
           </Reveal>
           <Reveal delay={0.3} width="fit-content" yPos={true}>
             <li className="mx-4 cursor-pointer">
-              <a href="#education">Education</a>
+              <Link href={"/#education"}>Education</Link>
             </li>
           </Reveal>
           <Reveal delay={0.35} width="fit-content" yPos={true}>
             <li className="mx-4 cursor-pointer">
-              <a href="#project">Project</a>
+              <Link href={"/#projects"}>Projects</Link>
             </li>
           </Reveal>
           <Reveal delay={0.4} width="fit-content" yPos={true}>
             <li className="mx-4 cursor-pointer">
-              <a href="#contact">Contact</a>
+              <Link href={"/#contact"}>Contact</Link>
             </li>
           </Reveal>
           <Reveal delay={0.45} width="fit-content" yPos={true}>

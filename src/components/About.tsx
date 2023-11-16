@@ -5,7 +5,7 @@ import { BsCode } from "react-icons/bs";
 import Image from "next/image";
 import Reveal from "./Reveal";
 
-function About() {
+const About: React.FC = () => {
   const ref = useRef(null);
   const mainControls = useAnimation();
   const inView = useInView(ref, { once: true });
@@ -29,7 +29,7 @@ function About() {
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             className="absolute bottom-0 h-full w-full bg-slate-900"
           ></motion.div>
         </div>
@@ -43,8 +43,8 @@ function About() {
             <Reveal width="100%" delay={0.3} xPos={-75}>
               <div>
                 <p className="text-justify">
-                  Hello! My name is Nikhil Karthik and I am a sophomore at IIIT
-                  Dharwad, pursuing CSE,B.Tech. I am currently in my 2nd year.
+                  Hello! My name is Nikhil Karthik and I am a pre-final year student at IIIT
+                  Dharwad, pursuing CSE, B.Tech.
                 </p>
                 <p>
                   Operating Systems, Astronomy, AI, and development are some of

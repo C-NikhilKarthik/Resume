@@ -2,17 +2,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { BsCode } from "react-icons/bs";
-import Intro from "../components/Intro";
-import Navbar from "../components/Navbar";
+import Intro from "../../components/Intro";
+import Navbar from "../../components/Navbar";
 import { FiGithub, FiLinkedin, FiCodepen } from "react-icons/fi";
-import About from "../components/About";
-import Projects from "../components/Projects";
-import Footer from "../components/Footer";
+import About from "../../components/About";
+import Projects from "../../components/Projects";
+import Footer from "../../components/Footer";
 import { RxCross2 } from "react-icons/rx";
-import DrawerButtons from "../components/DrawerButtons";
+import DrawerButtons from "../../components/DrawerButtons";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
+import Archive from "@/components/Archive";
 
 function Home() {
   const [show, setShow] = useState(false);
@@ -46,7 +47,7 @@ function Home() {
   }, [inView]);
 
   return (
-    <div className="relative overflow-hidden h-full w-full bg-[#08192e]">
+    <div className="relative h-full w-full bg-[#08192e]">
       <div
         className="pointer-events-none fixed inset-0 z-[2] transition duration-300 lg:absolute"
         style={{
@@ -58,9 +59,9 @@ function Home() {
       ></div>
       <div className="relative z-30">
         <Navbar show={show} setShow={setShow} />
-        <div className="flex-col items-center flex">
-          <div className="h-screen box-border pt-3 md:pt-8 lg:pt-12 max-w-[1800px] px-[10px] md:px-[100px] flex items-center justify-center">
-            <div className="flex md:mx-8 mx-4 flex-col items-center h-full pt-20">
+        <div className="flex-col h-full items-center flex">
+          <div className="w-full px-12 pt-28 flex h-fit justify-center">
+            <div className="flex md:mx-8 mx-4 flex-col items-center ">
               <BsCode className="text-2xl drop-shadow-[0_6px_10px_rgba(192_132_250)] mb-4 text-gray-400" />
               <div className="h-full w-[3px] rounded bg-[#64ffdba1] relative">
                 <motion.div
@@ -71,20 +72,14 @@ function Home() {
                   }}
                   initial="hidden"
                   animate={mainControls}
-                  transition={{ duration: 1, ease: "easeInOut" }}
+                  transition={{ duration: 3, ease: "easeInOut" }}
                   className="absolute bottom-0 h-full w-full bg-slate-900"
                 ></motion.div>
               </div>
             </div>
-            <div className="h-full w-full">
-              <Intro />
-            </div>
+            <Archive />
           </div>
-          <main className="w-full mt-12 max-w-[1800px] px-[10px] md:px-[100px] text-[#a8b2d1] h-full gap-12 flex flex-col items-center justify-center">
-            <About />
-            <Projects />
-            <Footer />
-          </main>
+
           <div className="hidden fixed bottom-0 md:flex right-20 w-fit items-center rotate-90 h-10 origin-bottom-right">
             <div className="flex flex-row-reverse h-full items-center">
               <Reveal delay={0.3} yPos={true}>
