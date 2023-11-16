@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+// import { motion, useInView, useAnimation } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 import { BsCode } from "react-icons/bs";
@@ -9,16 +9,16 @@ import Reveal from "./Reveal";
 import Project from "./Archives";
 function Archive() {
   const ref = useRef(null);
-  const mainControls = useAnimation();
-  const inView = useInView(ref, { once: true });
+  // const mainControls = useAnimation();
+  // const inView = useInView(ref, { once: true });
 
   const sortedProjects = Project.sort((a, b) => b.Year - a.Year);
 
-  useEffect(() => {
-    if (inView) {
-      mainControls.start("visible");
-    } else mainControls.set("hidden");
-  }, [inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     mainControls.start("visible");
+  //   } else mainControls.set("hidden");
+  // }, [inView]);
   return (
     <div id="about" className="text-gray-400 w-full">
       <h2 className="whitespace-nowrap flex items-center text-[clamp(40px,8vw,72px)] font-semibold">

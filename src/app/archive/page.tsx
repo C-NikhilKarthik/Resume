@@ -2,17 +2,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { BsCode } from "react-icons/bs";
-import Intro from "../../components/Intro";
 import Navbar from "../../components/Navbar";
 import { FiGithub, FiLinkedin, FiCodepen } from "react-icons/fi";
-import About from "../../components/About";
-import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
 import { RxCross2 } from "react-icons/rx";
 import DrawerButtons from "../../components/DrawerButtons";
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import Link from "next/link";
 import Archive from "@/components/Archive";
 
 function Home() {
