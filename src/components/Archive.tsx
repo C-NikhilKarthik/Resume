@@ -24,7 +24,7 @@ function Archive() {
       <h2 className="whitespace-nowrap flex items-center text-[clamp(40px,8vw,72px)] font-semibold">
         Archive
       </h2>
-      <h3 className="text-[#64ffda] text-lg">List of things I've worked on</h3>
+      <h3 className="text-[#64ffda] text-lg">List of things I&apos;ve worked on</h3>
       <div className="my-24 w-full">
         <table className="table-auto text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-gray-700 uppercase dark:text-gray-400">
