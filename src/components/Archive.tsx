@@ -24,21 +24,23 @@ function Archive() {
       <h2 className="whitespace-nowrap flex items-center text-[clamp(40px,8vw,72px)] font-semibold">
         Archive
       </h2>
-      <h3 className="text-[#64ffda] text-lg">List of things I&apos;ve worked on</h3>
+      <h3 className="text-[#64ffda] text-lg">
+        List of things I&apos;ve worked on
+      </h3>
       <div className="my-24 w-full">
-        <table className="table-auto text-sm text-left text-gray-500 dark:text-gray-400">
+        <table className="table-auto w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-gray-700 uppercase dark:text-gray-400">
             <tr>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="md:px-6 md:py-3 p-2">
                 Year
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="md:px-6 md:py-3 p-2">
                 Title
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="hidden lg:flex px-6 py-3">
                 Built on
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="md:px-6 md:py-3 p-2">
                 Link
               </th>
             </tr>
@@ -49,15 +51,12 @@ function Archive() {
                 key={proj.key}
                 className="odd:bg-[#08192ef0]/50 hover:text-[#64ffda] even:bg-[#cacacaf0]/20 border-b dark:border-gray-700"
               >
-                <td className="px-6 py-4">{proj.Year}</td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium whitespace text-white group-hover:text-[#64ffda]"
-                >
+                <td className="md:px-6 md:py-3 p-4">{proj.Year}</td>
+                <td className="md:px-6 md:py-3 p-4 font-medium whitespace text-white group-hover:text-[#64ffda]">
                   {proj.heading}
-                </th>
-                <td className="px-6 py-4">
-                  <div className="flex flex-wrap max-w-[400px]">
+                </td>
+                <td className="hidden lg:flex md:px-6 md:py-3 p-4">
+                  <div className="flex flex-wrap w-full max-w-[400px]">
                     {proj.techStack?.length > 0 &&
                       proj.techStack.map((item, i) => (
                         <span key={i}>
@@ -69,17 +68,19 @@ function Archive() {
                       ))}
                   </div>
                 </td>
-                <td className="flex px-6 py-4 gap-2 items-center text-lg">
-                  {proj?.Link && (
-                    <a href={proj?.Link} aria-label="External Link">
-                      <FiExternalLink />
-                    </a>
-                  )}
-                  {proj?.GitHubLink && (
-                    <a href={proj?.GitHubLink} aria-label="GitHub Link">
-                      <FiGithub />
-                    </a>
-                  )}
+                <td className="md:px-6 md:py-3 p-4 text-lg">
+                  <div className="flex items-center gap-2">
+                    {proj?.Link && (
+                      <a href={proj?.Link} aria-label="External Link">
+                        <FiExternalLink />
+                      </a>
+                    )}
+                    {proj?.GitHubLink && (
+                      <a href={proj?.GitHubLink} aria-label="GitHub Link">
+                        <FiGithub />
+                      </a>
+                    )}
+                  </div>
                 </td>
               </tr>
             ))}

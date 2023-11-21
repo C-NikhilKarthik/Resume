@@ -55,7 +55,7 @@ function Home() {
       <div className="relative z-30">
         <Navbar show={show} setShow={setShow} />
         <div className="flex-col h-full items-center flex">
-          <div className="w-full px-12 pt-28 flex h-fit justify-center">
+          <div className="w-full md:px-12 md:pr-28 pt-28 flex h-fit justify-center">
             <div className="flex md:mx-8 mx-4 flex-col items-center ">
               <BsCode className="text-2xl drop-shadow-[0_6px_10px_rgba(192_132_250)] mb-4 text-gray-400" />
               <div className="h-full w-[3px] rounded bg-[#64ffdba1] relative">
