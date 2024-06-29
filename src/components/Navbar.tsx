@@ -53,27 +53,27 @@ function Navbar({
         </Reveal>
         <ul className="md:flex items-center hidden text-slate-300 text-sm">
           <Reveal delay={0.25} width="fit-content" yPos={true}>
-            <li className="mx-4 cursor-pointer">
+            <li className="mx-4 cursor-pointer hover:text-primary">
               <Link href={"/#about"}>About</Link>
             </li>
           </Reveal>
           <Reveal delay={0.3} width="fit-content" yPos={true}>
-            <li className="mx-4 cursor-pointer">
+            <li className="mx-4 cursor-pointer hover:text-primary">
               <Link href={"/#education"}>Education</Link>
             </li>
           </Reveal>
           <Reveal delay={0.35} width="fit-content" yPos={true}>
-            <li className="mx-4 cursor-pointer">
+            <li className="mx-4 cursor-pointer hover:text-primary">
               <Link href={"/#projects"}>Projects</Link>
             </li>
           </Reveal>
           <Reveal delay={0.4} width="fit-content" yPos={true}>
-            <li className="mx-4 cursor-pointer">
+            <li className="mx-4 cursor-pointer hover:text-primary">
               <Link href={"/#contact"}>Contact</Link>
             </li>
           </Reveal>
           <Reveal delay={0.45} width="fit-content" yPos={true}>
-            <button className="mx-4 hover:bg-[#64ffdb24] transition-[background-color] duration-300 text-[#64FFDA] border-2 border-[#64FFDA] px-4 py-2 rounded-md text-sm font-semibold">
+            <button className="mx-4 hover:bg-[#64ffdb24] transition-[background-color] duration-300 text-primary border-2 border-primary px-4 py-2 rounded-md text-sm font-semibold">
               Resume
             </button>
           </Reveal>

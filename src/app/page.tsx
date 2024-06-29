@@ -59,7 +59,7 @@ function Home() {
       <div className="relative z-30">
         <Navbar show={show} setShow={setShow} />
         <div className="flex-col items-center flex">
-          <div className="h-screen box-border pt-3 md:pt-8 lg:pt-12 max-w-[1800px] px-[10px] md:px-[100px] flex items-center justify-center">
+          <div className="w-full h-screen mt-12 max-w-[1800px] px-[10px] md:px-[100px] text-[#a8b2d1] flex items-center">
             <div className="flex md:mx-8 mx-4 flex-col items-center h-full pt-20">
               <BsCode className="text-2xl drop-shadow-[0_6px_10px_rgba(192_132_250)] mb-4 text-gray-400" />
               <div className="h-full w-[3px] rounded bg-[#64ffdba1] relative">
@@ -80,7 +80,7 @@ function Home() {
               <Intro />
             </div>
           </div>
-          <main className="w-full mt-12 max-w-[1800px] px-[10px] md:px-[100px] text-[#a8b2d1] h-full gap-12 flex flex-col items-center justify-center">
+          <main className="w-full mt-12 max-w-[1800px] px-[10px] md:px-[100px] text-[#a8b2d1] h-full gap-12 flex flex-col items-center">
             <About />
             <Projects />
             <Footer />

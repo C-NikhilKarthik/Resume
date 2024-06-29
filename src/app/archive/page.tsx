@@ -42,7 +42,7 @@ function Home() {
   }, [inView]);
 
   return (
-    <div className="relative h-full w-full bg-[#08192e]">
+    <div className="relative h-full min-h-screen w-full bg-[#08192e]">
       <div
         className="pointer-events-none fixed inset-0 z-[2] transition duration-300 lg:absolute"
         style={{

@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Intro() {
   return (
-    <div className="w-full h-screen flex items-center justify-center pr-8 md:px-24">
+    <div className="w-full h-screen flex items-center pr-8 md:px-24">
       <div className="w-full max-w-[1000px] flex flex-col">
         <Reveal xPos={-75} width="100%" delay={0.4}>
           <div className="text-[clamp(14px,5vw,16px)] leading-[1.1] mb-[20px] text-[#64FFDA]">

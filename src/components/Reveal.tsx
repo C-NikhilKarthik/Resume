@@ -16,7 +16,6 @@ export default function Reveal({
   delay,
   yPos = false,
 }: Props) {
-  console.log(delay);
   const ref = useRef(null);
   const mainControls = useAnimation();
   const inView = useInView(ref, { once: false });

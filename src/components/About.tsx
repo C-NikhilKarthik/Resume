@@ -34,7 +34,7 @@ const About: React.FC = () => {
           ></motion.div>
         </div>
       </div>
-      <section id="about" className="max-w-[900px] w-full mx-auto">
+      <section id="about" className="w-full pr-8 md:px-24">
         <h2 className="mt-[10px] mb-10 whitespace-nowrap flex items-center after:ml-6 after:block after:w-full md:after:w-[300px] after:h-[1px] after:bg-[#233554] text-[clamp(26px,5vw,32px)] font-semibold">
           About Me
         </h2>
@@ -43,8 +43,8 @@ const About: React.FC = () => {
             <Reveal width="100%" delay={0.3} xPos={-75}>
               <div>
                 <p className="text-justify">
-                  Hello! My name is Nikhil Karthik and I am a pre-final year student at IIIT
-                  Dharwad, pursuing CSE, B.Tech.
+                  Hello! My name is Nikhil Karthik and I am a pre-final year
+                  student at IIIT Dharwad, pursuing CSE, B.Tech.
                 </p>
                 <p>
                   Operating Systems, Astronomy, AI, and development are some of
@@ -102,6 +102,6 @@ const About: React.FC = () => {
       </section>
     </div>
   );
-}
+};
 
 export default About;
